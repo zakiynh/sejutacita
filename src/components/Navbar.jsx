@@ -1,10 +1,10 @@
 import { FaBars } from "react-icons/fa";
 
-export default function Navbar() {
+export default function Navbar({active, setActive}) {
     return (
         <nav className="h-[15%] bg-white border-b-2 border-yellow-400 flex justify-between">
             <div className="w-[50%] flex items-center">
-                <button className="lg:hidden ml-2 text-2xl hover:text-gray-500">
+                <button className="lg:hidden ml-2 text-2xl hover:text-gray-500" onClick={() => setActive(!active)}>
                     <FaBars />
                 </button>
                 <img
