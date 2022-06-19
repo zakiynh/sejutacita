@@ -1,5 +1,4 @@
-import axios from "axios";
-import { FETCH_CATEGORY, FETCH_BOOK, FETCH_BOOK_BY_CATEGORY } from "./actionType";
+import { FETCH_CATEGORY, FETCH_BOOK, FETCH_BOOK_BY_CATEGORY, BOOKMARK } from "./actionType";
 
 export const fetchCategory = (payload) => {
     return {
@@ -18,6 +17,13 @@ export const fetchBook = (payload) => {
 export const fetchTotalBooks = (payload) => {
     return {
         type: FETCH_BOOK_BY_CATEGORY,
+        payload
+    }
+}
+
+export const bookmark = (payload) => {
+    return {
+        type: BOOKMARK,
         payload
     }
 }
@@ -53,6 +59,18 @@ export const fetchBookPage = (id) => {
             const data = await response.json()
             dispatch(fetchTotalBooks(data))
             return data
+        } catch(error) {
+            console.log(error)
+        }
+    }
+}
+
+export const doBookmark = (id) => {
+    return async (dispatch, getState) => {
+        try {
+            const data = getState()
+            return data
+
         } catch(error) {
             console.log(error)
         }

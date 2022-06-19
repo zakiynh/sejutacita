@@ -1,3 +1,4 @@
 export const FETCH_CATEGORY = 'FETCH_CATEGORY';
 export const FETCH_BOOK = 'FETCH_BOOK';
 export const FETCH_BOOK_BY_CATEGORY = 'FETCH_BOOK_BY_CATEGORY'
+export const BOOKMARK = 'BOOKMARK'

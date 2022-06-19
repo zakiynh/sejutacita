@@ -30,7 +30,7 @@ function BookContent() {
         .then((data) => {
             setTotal(data);
         });
-    }, [dispatch]);
+    }, [dispatch, currentPage]);
 
     if (!books) {
         return <div>Loading...</div>;
@@ -55,7 +55,7 @@ function BookContent() {
                 </div>
                 <div className="flex flex-col p-8 lg:flex lg:flex-row justify-center lg:flex-wrap w-full gap-3 lg:pt-1">
                     {books.map((el, i) => {
-                        return <CardBook key={i} el={el} />;
+                        return <CardBook key={i} el={el} currentPage={currentPage} />;
                     })}
                 </div>
                 <div>
