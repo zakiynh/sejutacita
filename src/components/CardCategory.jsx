@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 function CardCategory({ cat }) {
     return (
         <>
-            <div className="border-2 border-yellow-400 mt-2 rounded-xl py-2 w-full lg:w-72 h-[50%] hover:shadow-xl">
+            <div className="border shadow-inner rounded-xl py-2 w-full lg:w-72 h-[50%] hover:shadow-xl">
                 <div className="flex flex-row h-[80%] lg:flex-col lg:">
                     <div className="w-full lg:w-full text-[#1c1a4e] text-left p-2 space-y-1">
                         <div>

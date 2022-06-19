@@ -1,18 +1,19 @@
 import { FaBars } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 export default function Navbar({active, setActive}) {
     return (
         <nav className="h-[15%] bg-white border-b-2 border-yellow-400 flex justify-between">
-            <div className="w-[50%] flex items-center">
+            <Link to={'/'} className="w-[50%] flex items-center">
                 <button className="lg:hidden ml-2 text-2xl hover:text-gray-500" onClick={() => setActive(!active)}>
                     <FaBars />
                 </button>
                 <img
                     src="https://sejutacita.id/static/media/logo-bg-new.14982478.png"
-                    alt="log-kar"
+                    alt="sejuta-cita-logo"
                     className="ml-5 w-28 lg:w-40"
                 />
-            </div>
+            </Link>
             <div className="flex space-x-3 items-center p-3">
                 <div className="flex space-x-1">
                     <h1 className="text-[#1c1a4e] hidden lg:block">Hallo, User</h1>

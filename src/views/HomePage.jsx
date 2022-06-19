@@ -3,6 +3,7 @@ import Navbar from "../components/Navbar";
 import Sidebar from "../components/Sidebar";
 import MainContent from "../components/MainContent";
 import BookContent from "../components/BookContent";
+import LandingPage from "../components/LandingPage";
 import { Route, Routes } from "react-router-dom";
 import { useState } from "react"
 
@@ -14,7 +15,8 @@ function HomePage() {
             <div className="min-h-[100%] lg:min-h-[85%] flex">
                 <Sidebar active={active}/>
                 <Routes>
-                    <Route path="/" element={<MainContent />} />
+                    <Route path="/" element={<LandingPage />} />
+                    <Route path="/category" element={<MainContent />} />
                     <Route path="/book/:categoryId" element={<BookContent />} />
                 </Routes>
             </div>
