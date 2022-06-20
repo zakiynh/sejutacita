@@ -20,7 +20,10 @@ function BookContent() {
   const handlePageClick = (data) => {
     setCurrentPage(data.selected);
     const newPage = data.selected;
-    dispatch(fetchAllBooks(categoryId, newPage, perPage));
+    dispatch(fetchAllBooks(categoryId, newPage, perPage))
+    .then((res) => {
+      setBookData(res);
+    })
   };
 
   const pageCount = Math.ceil(total.length / perPage);
